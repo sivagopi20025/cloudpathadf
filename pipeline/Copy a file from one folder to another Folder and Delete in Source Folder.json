@@ -1,5 +1,5 @@
 {
-	"name": "Copy files from one folder to another Folder and Delete in Source Folder",
+	"name": "Copy a file from one folder to another Folder and Delete in Source Folder",
 	"properties": {
 		"activities": [
 			{
