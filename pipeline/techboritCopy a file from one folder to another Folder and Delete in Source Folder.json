@@ -53,7 +53,8 @@
 						"referenceName": "ds_blob_csv_bgcsr002",
 						"type": "DatasetReference",
 						"parameters": {
-							"foldername": "abcd001"
+							"foldername": "abcd001",
+							"filename": "amazon.csv"
 						}
 					}
 				],
