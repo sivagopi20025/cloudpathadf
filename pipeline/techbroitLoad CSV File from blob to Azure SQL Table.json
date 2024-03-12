@@ -1,5 +1,5 @@
 {
-	"name": "Load CSV File from blob to Azure SQL Table",
+	"name": "techbroitLoad CSV File from blob to Azure SQL Table",
 	"properties": {
 		"activities": [
 			{
