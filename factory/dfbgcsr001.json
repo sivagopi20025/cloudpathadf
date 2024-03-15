@@ -1,0 +1,9 @@
+{
+	"name": "dfbgcsr001",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "280266b8-e270-48b7-91dd-93688dbcc972",
+		"tenantId": "7335011f-1748-4902-8dee-6f4dac036859"
+	}
+}
