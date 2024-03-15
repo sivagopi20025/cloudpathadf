@@ -1,10 +1,6 @@
 {
 	"name": "ds_blob_csv_bgcsr003",
 	"properties": {
-		"linkedServiceName": {
-			"referenceName": "ls_blobbgcsr001",
-			"type": "LinkedServiceReference"
-		},
 		"parameters": {
 			"foldername": {
 				"type": "string"

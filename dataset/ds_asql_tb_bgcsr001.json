@@ -1,10 +1,6 @@
 {
 	"name": "ds_asql_tb_bgcsr001",
 	"properties": {
-		"linkedServiceName": {
-			"referenceName": "Azuresqldbbgcsr001",
-			"type": "LinkedServiceReference"
-		},
 		"annotations": [],
 		"type": "AzureSqlTable",
 		"schema": [],
