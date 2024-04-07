@@ -16,6 +16,9 @@
 		},
 		"ls_ADLS_bgcsrk001_properties_typeProperties_url": {
 			"value": "https://adlsbgcsr001.dfs.core.windows.net/"
+		},
+		"ls_restapiemp_bgcsrk001_properties_typeProperties_url": {
+			"value": "https://dummy.restapiexample.com/api/v1/employees"
 		}
 	}
 }
