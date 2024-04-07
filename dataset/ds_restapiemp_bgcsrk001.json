@@ -1,0 +1,12 @@
+{
+	"name": "ds_restapiemp_bgcsrk001",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_restapiemp_bgcsrk001",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"schema": []
+	}
+}
