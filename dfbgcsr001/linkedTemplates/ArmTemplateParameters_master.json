@@ -16,6 +16,12 @@
 		},
 		"ls_ADLS_bgcsrk001_properties_typeProperties_url": {
 			"value": "https://adlsbgcsr001.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
 		}
 	}
 }
