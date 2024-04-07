@@ -45,7 +45,7 @@
 								},
 								"sink": {
 									"name": "status",
-									"type": "Int16"
+									"type": "String"
 								}
 							},
 							{
