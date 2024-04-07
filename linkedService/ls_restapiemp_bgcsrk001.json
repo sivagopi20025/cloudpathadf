@@ -1,0 +1,12 @@
+{
+	"name": "ls_restapiemp_bgcsrk001",
+	"properties": {
+		"annotations": [],
+		"type": "RestService",
+		"typeProperties": {
+			"url": "https://dummy.restapiexample.com/api/v1/employees",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Anonymous"
+		}
+	}
+}
