@@ -1,0 +1,9 @@
+{
+	"name": "dfprabha001",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "1d5d7aad-d7fd-40d2-95cb-515a4d049121",
+		"tenantId": "be5202cd-1ca6-494a-b96b-1d79f2d4fe34"
+	}
+}
