@@ -1,0 +1,39 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "dfprabha001"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"ls_ADLS_bgcsrk001_accountKey": {
+			"value": ""
+		},
+		"ls_Asql_bgcsrk001_connectionString": {
+			"value": ""
+		},
+		"ls_prabhaadls001_accountKey": {
+			"value": ""
+		},
+		"ls_prabhablob001_connectionString": {
+			"value": ""
+		},
+		"ls_ADLS_bgcsrk001_properties_typeProperties_url": {
+			"value": "https://adlsbgcsr001.dfs.core.windows.net/"
+		},
+		"ls_prabhaadls001_properties_typeProperties_url": {
+			"value": "https://adlsprabha001.dfs.core.windows.net/"
+		},
+		"ls_restapiemp_bgcsrk001_properties_typeProperties_url": {
+			"value": "https://dummy.restapiexample.com/api/v1/employees"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
