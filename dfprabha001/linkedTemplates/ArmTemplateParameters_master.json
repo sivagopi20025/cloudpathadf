@@ -29,6 +29,9 @@
 		"ls_restapiemp_bgcsrk001_properties_typeProperties_url": {
 			"value": "https://dummy.restapiexample.com/api/v1/employees"
 		},
+		"delete_schedule_properties_Delete activity_parameters_sinkfolder": {
+			"value": "employ"
+		},
 		"containerUri": {
 			"value": ""
 		},
