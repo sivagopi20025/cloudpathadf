@@ -1,0 +1,28 @@
+{
+	"name": "delete_schedule",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "Delete activity",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"sinkfolder": "employ"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Hour",
+				"interval": 1,
+				"startTime": "2024-05-10T10:20:00",
+				"endTime": "2024-05-10T10:30:00",
+				"timeZone": "Central Standard Time"
+			}
+		}
+	}
+}

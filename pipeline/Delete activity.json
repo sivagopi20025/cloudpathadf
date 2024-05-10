@@ -1,0 +1,56 @@
+{
+	"name": "Delete activity",
+	"properties": {
+		"activities": [
+			{
+				"name": "Delete1",
+				"type": "Delete",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataset": {
+						"referenceName": "ds_abs_prabha001",
+						"type": "DatasetReference",
+						"parameters": {
+							"sourcetable": "weightlifting"
+						}
+					},
+					"logStorageSettings": {
+						"linkedServiceName": {
+							"referenceName": "ls_prabhaadls001",
+							"type": "LinkedServiceReference"
+						},
+						"path": {
+							"value": "@pipeline().parameters.sinkfolder",
+							"type": "Expression"
+						}
+					},
+					"enableLogging": true,
+					"storeSettings": {
+						"type": "AzureBlobStorageReadSettings",
+						"recursive": true,
+						"wildcardFileName": "*",
+						"enablePartitionDiscovery": false
+					}
+				}
+			}
+		],
+		"parameters": {
+			"sinkfolder": {
+				"type": "string",
+				"defaultValue": "employ"
+			}
+		},
+		"folder": {
+			"name": "wafa studies/Individualactivity"
+		},
+		"annotations": []
+	}
+}
