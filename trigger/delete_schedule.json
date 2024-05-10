@@ -24,7 +24,7 @@
 			},
 			{
 				"pipelineReference": {
-					"referenceName": "pipeline1",
+					"referenceName": "parameterized copydata activity",
 					"type": "PipelineReference"
 				},
 				"parameters": {

@@ -26,11 +26,8 @@
 						}
 					},
 					"fieldList": [
-						"itemName",
-						"lastModified",
 						"childItems",
-						"exists",
-						"itemType"
+						"lastModified"
 					],
 					"storeSettings": {
 						"type": "AzureBlobStorageReadSettings",
