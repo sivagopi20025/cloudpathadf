@@ -38,10 +38,6 @@
 		"ls_restapiemp_bgcsrk001_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://dummy.restapiexample.com/api/v1/employees"
-		},
-		"delete_schedule_properties_Delete activity_parameters_sinkfolder": {
-			"type": "string",
-			"defaultValue": "employ"
 		}
 	},
 	"variables": {
@@ -1334,36 +1330,67 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/delete_schedule')]",
-			"type": "Microsoft.DataFactory/factories/triggers",
+			"name": "[concat(parameters('factoryName'), '/getmetadata activity')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
 			"properties": {
-				"annotations": [],
-				"runtimeState": "Started",
-				"pipelines": [
+				"activities": [
 					{
-						"pipelineReference": {
-							"referenceName": "Delete activity",
-							"type": "PipelineReference"
+						"name": "Get Metadata1",
+						"type": "GetMetadata",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
 						},
-						"parameters": {
-							"sinkfolder": "[parameters('delete_schedule_properties_Delete activity_parameters_sinkfolder')]"
+						"userProperties": [],
+						"typeProperties": {
+							"dataset": {
+								"referenceName": "ds_abs_prabha001",
+								"type": "DatasetReference",
+								"parameters": {
+									"sourcetable": {
+										"value": "@pipeline().parameters.foldername",
+										"type": "Expression"
+									}
+								}
+							},
+							"fieldList": [
+								"itemName",
+								"lastModified",
+								"childItems",
+								"exists",
+								"itemType"
+							],
+							"storeSettings": {
+								"type": "AzureBlobStorageReadSettings",
+								"enablePartitionDiscovery": false
+							},
+							"formatSettings": {
+								"type": "DelimitedTextReadSettings"
+							}
 						}
 					}
 				],
-				"type": "ScheduleTrigger",
-				"typeProperties": {
-					"recurrence": {
-						"frequency": "Hour",
-						"interval": 1,
-						"startTime": "2024-05-10T10:20:00",
-						"endTime": "2024-05-10T10:30:00",
-						"timeZone": "Central Standard Time"
+				"policy": {
+					"elapsedTimeMetric": {}
+				},
+				"parameters": {
+					"foldername": {
+						"type": "string",
+						"defaultValue": "sample"
 					}
-				}
+				},
+				"folder": {
+					"name": "wafa studies/Individualactivity"
+				},
+				"annotations": []
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/pipelines/Delete activity')]"
+				"[concat(variables('factoryId'), '/datasets/ds_abs_prabha001')]"
 			]
 		}
 	]

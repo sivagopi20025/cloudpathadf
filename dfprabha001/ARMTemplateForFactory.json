@@ -42,6 +42,10 @@
 		"delete_schedule_properties_Delete activity_parameters_sinkfolder": {
 			"type": "string",
 			"defaultValue": "employ"
+		},
+		"delete_schedule_properties_getmetadata activity_parameters_foldername": {
+			"type": "string",
+			"defaultValue": "sample"
 		}
 	},
 	"variables": {
@@ -1349,6 +1353,15 @@
 						"parameters": {
 							"sinkfolder": "[parameters('delete_schedule_properties_Delete activity_parameters_sinkfolder')]"
 						}
+					},
+					{
+						"pipelineReference": {
+							"referenceName": "getmetadata activity",
+							"type": "PipelineReference"
+						},
+						"parameters": {
+							"foldername": "[parameters('delete_schedule_properties_getmetadata activity_parameters_foldername')]"
+						}
 					}
 				],
 				"type": "ScheduleTrigger",
@@ -1356,14 +1369,79 @@
 					"recurrence": {
 						"frequency": "Hour",
 						"interval": 1,
-						"startTime": "2024-05-10T10:20:00",
-						"endTime": "2024-05-10T10:30:00",
+						"startTime": "2024-05-10T10:30:00",
+						"endTime": "2024-05-10T10:45:00",
 						"timeZone": "Central Standard Time"
 					}
 				}
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/pipelines/Delete activity')]"
+				"[concat(variables('factoryId'), '/pipelines/Delete activity')]",
+				"[concat(variables('factoryId'), '/pipelines/getmetadata activity')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/getmetadata activity')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"activities": [
+					{
+						"name": "Get Metadata1",
+						"type": "GetMetadata",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"dataset": {
+								"referenceName": "ds_abs_prabha001",
+								"type": "DatasetReference",
+								"parameters": {
+									"sourcetable": {
+										"value": "@pipeline().parameters.foldername",
+										"type": "Expression"
+									}
+								}
+							},
+							"fieldList": [
+								"itemName",
+								"lastModified",
+								"childItems",
+								"exists",
+								"itemType"
+							],
+							"storeSettings": {
+								"type": "AzureBlobStorageReadSettings",
+								"enablePartitionDiscovery": false
+							},
+							"formatSettings": {
+								"type": "DelimitedTextReadSettings"
+							}
+						}
+					}
+				],
+				"policy": {
+					"elapsedTimeMetric": {}
+				},
+				"parameters": {
+					"foldername": {
+						"type": "string",
+						"defaultValue": "sample"
+					}
+				},
+				"folder": {
+					"name": "wafa studies/Individualactivity"
+				},
+				"annotations": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/datasets/ds_abs_prabha001')]"
 			]
 		}
 	]

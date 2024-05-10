@@ -31,6 +31,9 @@
 		},
 		"delete_schedule_properties_Delete activity_parameters_sinkfolder": {
 			"value": "employ"
+		},
+		"delete_schedule_properties_getmetadata activity_parameters_foldername": {
+			"value": "sample"
 		}
 	}
 }
