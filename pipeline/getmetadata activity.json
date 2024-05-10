@@ -1,0 +1,56 @@
+{
+	"name": "getmetadata activity",
+	"properties": {
+		"activities": [
+			{
+				"name": "Get Metadata1",
+				"type": "GetMetadata",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataset": {
+						"referenceName": "ds_abs_prabha001",
+						"type": "DatasetReference",
+						"parameters": {
+							"sourcetable": {
+								"value": "@pipeline().parameters.foldername",
+								"type": "Expression"
+							}
+						}
+					},
+					"fieldList": [
+						"itemName",
+						"lastModified",
+						"childItems",
+						"exists",
+						"itemType"
+					],
+					"storeSettings": {
+						"type": "AzureBlobStorageReadSettings",
+						"enablePartitionDiscovery": false
+					},
+					"formatSettings": {
+						"type": "DelimitedTextReadSettings"
+					}
+				}
+			}
+		],
+		"parameters": {
+			"foldername": {
+				"type": "string",
+				"defaultValue": "sample"
+			}
+		},
+		"folder": {
+			"name": "wafa studies/Individualactivity"
+		},
+		"annotations": []
+	}
+}
