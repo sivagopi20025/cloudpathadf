@@ -1,0 +1,32 @@
+{
+	"name": "ds_lookup",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_prabhablob001",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "config_file.csv",
+				"container": "config"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "sourcefolder",
+				"type": "String"
+			},
+			{
+				"name": "sinkfolder",
+				"type": "String"
+			}
+		]
+	}
+}
