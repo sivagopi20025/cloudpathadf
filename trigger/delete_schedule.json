@@ -12,6 +12,15 @@
 				"parameters": {
 					"sinkfolder": "employ"
 				}
+			},
+			{
+				"pipelineReference": {
+					"referenceName": "getmetadata activity",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"foldername": "sample"
+				}
 			}
 		],
 		"type": "ScheduleTrigger",
@@ -19,8 +28,8 @@
 			"recurrence": {
 				"frequency": "Hour",
 				"interval": 1,
-				"startTime": "2024-05-10T10:20:00",
-				"endTime": "2024-05-10T10:30:00",
+				"startTime": "2024-05-10T10:30:00",
+				"endTime": "2024-05-10T10:45:00",
 				"timeZone": "Central Standard Time"
 			}
 		}
