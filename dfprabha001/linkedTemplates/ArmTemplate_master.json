@@ -47,6 +47,14 @@
 			"type": "string",
 			"defaultValue": "sample"
 		},
+		"delete_schedule_properties_pipeline1_parameters_srcfolderpath": {
+			"type": "string",
+			"defaultValue": "sample"
+		},
+		"delete_schedule_properties_pipeline1_parameters_sinkfolderpath": {
+			"type": "string",
+			"defaultValue": "employ"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -121,6 +129,12 @@
 					},
 					"delete_schedule_properties_getmetadata activity_parameters_foldername": {
 						"value": "[parameters('delete_schedule_properties_getmetadata activity_parameters_foldername')]"
+					},
+					"delete_schedule_properties_pipeline1_parameters_srcfolderpath": {
+						"value": "[parameters('delete_schedule_properties_pipeline1_parameters_srcfolderpath')]"
+					},
+					"delete_schedule_properties_pipeline1_parameters_sinkfolderpath": {
+						"value": "[parameters('delete_schedule_properties_pipeline1_parameters_sinkfolderpath')]"
 					}
 				}
 			},

@@ -35,6 +35,12 @@
 		"delete_schedule_properties_getmetadata activity_parameters_foldername": {
 			"value": "sample"
 		},
+		"delete_schedule_properties_pipeline1_parameters_srcfolderpath": {
+			"value": "sample"
+		},
+		"delete_schedule_properties_pipeline1_parameters_sinkfolderpath": {
+			"value": "employ"
+		},
 		"containerUri": {
 			"value": ""
 		},
