@@ -21,6 +21,16 @@
 				"parameters": {
 					"foldername": "sample"
 				}
+			},
+			{
+				"pipelineReference": {
+					"referenceName": "pipeline1",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"srcfolderpath": "sample",
+					"sinkfolderpath": "employ"
+				}
 			}
 		],
 		"type": "ScheduleTrigger",
